@@ -3,7 +3,7 @@ const db = require('../config/dbConfig');
 const server = require('./server.js');
 
 describe('server', () => {
-	beforeEach(async () => {
+	afterEach(async () => {
 		await db('smurfs').truncate();
 	});
 

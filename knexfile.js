@@ -33,6 +33,7 @@ module.exports = {
 			directory: './data/seeds'
 		},
 		pool: {
+			// number of connections
 			afterCreate: (connection, done) => {
 				connection.run('PRAGMA foreign_keys = ON', done);
 			}
